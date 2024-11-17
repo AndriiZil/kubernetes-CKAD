@@ -9,7 +9,7 @@
 ```bash
   selector:
     matchLabels:
-      tier: front-end 
+      tier: front-end
 ```
 
 ```bash
@@ -20,14 +20,15 @@
 ```
 
 - Update replicas
+
 ```bash
   kubectl get replicaset
-  
+
   kubectl create -f replicaset-definition.yaml
-  
+
   kubectl describe replicaset myapp-replicaset
-  
+
   kubectl replace -f replicaset-definition.yaml
-  
+
   kubectl scale --replicas=6 -f replicaset-definition.yaml
 ```
