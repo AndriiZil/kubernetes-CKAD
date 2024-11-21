@@ -73,3 +73,57 @@
 ```bash
   kubectl create -f compute-quota.yaml
 ```
+
+### Practice
+
+- Create NGINX Pod
+
+```bash
+  kubectl run nginx-pod --image=nginx:alpine
+```
+
+- Create Redis Pod
+
+```bash
+  kubectl run redis --image=redis:alpine --labels="tier=db"
+```
+
+- Service
+
+```bash
+  kubectl expose pod redis --port 6379 --name redis-service
+
+  kubectl get svc redis-service
+
+  kubectl describe svc redis-service
+```
+
+- Create Deployment
+
+```bash
+  kubectl create deployment webapp --image=andriizilnyk/simple-express-app --replicas=3
+```
+
+- Create NGINX Pod and expose it
+
+```bash
+  kubectl run custom-enginx --image=nginx --port=8080
+```
+
+- Create new namespace dev-ns
+
+```bash
+  kubectl create namespace dev-ns
+```
+
+- Create new deployment called redis-deploy in dev-ns namespace
+
+```bash
+  kubectl create deployment redis-deploy --image=redis --replicas=2 -n dev-ns
+```
+
+- Create httpd
+
+```bash
+  kubectl run httpd --image=httpd:alpine --port=80 --expose=true
+```
