@@ -10,4 +10,10 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/status', (req, res) => {
+  return res.send({
+    message: 'ok',
+  });
+});
+
 app.listen(3200, () => console.log('Server started on PORT 3200'));

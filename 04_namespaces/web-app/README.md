@@ -18,6 +18,12 @@
   docker tag node-express-app andriizilnyk/simple-express-app:latest
 ```
 
+- Or
+
+```bash
+  docker build -t andriizilnyk/simple-express-app .
+```
+
 - Login into docker hub and push
 
 ```bash

@@ -44,5 +44,16 @@
   redis   0/1     ErrImagePull   0          14s
 ```
 
-- Edit Pod
--
+- Exec into the Pod
+
+```bash
+  kubectl exec -it <pod-name> -- /bin/bash
+
+  kubectl exec -it <pod-name> -- /bin/sh
+```
+
+- Exec with Namespace
+
+```bash
+  kubectl exec -it <pod-name> -n <namespace> -- /bin/bash
+```
